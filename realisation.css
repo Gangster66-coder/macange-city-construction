@@ -1,0 +1,112 @@
+/* =========================
+   RESET GÉNÉRAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141313;
+    color: #0d0404;
+    line-height: 1.6;
+}
+
+/* =========================
+   BANDE ROULANTE
+========================= */
+.marquee {
+    width: 100%;
+    background-color: #f20505;
+    color: #fff;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+/* =========================
+   MENU HORIZONTAL
+========================= */
+.navbar {
+    background-color: #003366;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    
+}
+/* Paragraphes */
+.hero p {
+    text-align: justify;
+    margin-top: 15px;
+    color: black;
+}
+
+
+/* Menu */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: rgb(241, 239, 248);
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #ffffff;
+    color: #003366;
+    border-radius: 4px;
+}
+
+/* =========================
+   SECTION PRINCIPALE
+========================= */
+.hero {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(255, 253, 253);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(111, 110, 110);
+}
+
+/* Titres */
+.hero h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    margin-top: 30px;
+    color: #003366;
+}
+
+/* Paragraphes */
+.hero p {
+    text-align: justify;
+    margin-top: 15px;
+    color: #010101;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
