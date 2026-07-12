@@ -1,0 +1,267 @@
+/* =========================
+   RESET GÉNÉRAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E4DB;
+    color: #181510;
+    line-height: 1.6;
+}
+
+/* =========================
+   BANDE ROULANTE
+========================= */
+.marquee {
+    width: 100%;
+    background-color: #1B2A3A;
+    color: #E8A23D;
+    padding: 10px 0;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-scroll 22s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* =========================
+   MENU HORIZONTAL
+========================= */
+.navbar {
+    background-color: #1B2A3A;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #E8A23D;
+}
+
+/* Menu */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: rgb(241, 239, 248);
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #E8A23D;
+    color: #1B2A3A;
+    border-radius: 4px;
+}
+
+/* =========================
+   SECTION PRINCIPALE
+========================= */
+.hero {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #F6F4EF;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(27, 42, 58, 0.15);
+}
+
+/* Titres */
+.hero h1 {
+    text-align: center;
+    color: #1B2A3A;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    text-align: center;
+    color: #1B2A3A;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    margin-top: 30px;
+    color: #1B2A3A;
+}
+
+/* Paragraphes */
+.hero p {
+    text-align: justify;
+    margin-top: 15px;
+    color: #181510;
+}
+
+.hero ul,
+.hero li {
+    color: #181510;
+    margin-left: 20px;
+}
+
+.hero ul li {
+    margin-top: 6px;
+}
+
+/* =========================
+   PAGE CONTACT
+========================= */
+.contact-info {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #F6F4EF;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(27, 42, 58, 0.15);
+}
+
+.contact-info h1 {
+    color: #1B2A3A;
+    margin-bottom: 16px;
+}
+
+.contact-info h3 {
+    margin-top: 30px;
+    color: #1B2A3A;
+}
+
+.contact-info ul {
+    margin: 16px 0 0 20px;
+}
+
+.contact-info ul li {
+    margin-top: 8px;
+}
+
+.contact-info a {
+    color: #B97A1F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   SERVICES AVEC IMAGES (SANS JS)
+========================= */
+
+.container {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.services {
+    flex: 1;
+    min-width: 260px;
+}
+
+.services .category {
+    display: block;
+    margin: 18px 0 6px;
+    font-size: 15px;
+    color: #1B2A3A;
+}
+
+.services .category:first-child {
+    margin-top: 0;
+}
+
+/* Zone image à droite */
+.image-box {
+    width: 350px;
+    height: 250px;
+    position: relative;
+    border: 2px solid #d8d2c2;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+/* Images empilées */
+.image-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Radios cachés */
+.container input {
+    display: none;
+}
+
+/* Labels cliquables */
+.container label {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #181510;
+}
+
+/* Hover */
+.container label:hover {
+    color: #B97A1F;
+}
+
+/* Service sélectionné */
+.container input:checked + label {
+    background-color: #1B2A3A;
+    color: #E8A23D;
+    border-radius: 5px;
+}
+
+/* Affichage image selon service choisi */
+.container:has(#MI:checked) .img-MI,
+.container:has(#D:checked)  .img-D,
+.container:has(#ML:checked) .img-ML,
+.container:has(#H:checked)  .img-H,
+.container:has(#BP:checked) .img-BP,
+.container:has(#EC:checked) .img-EC,
+.container:has(#QM:checked) .img-QM,
+.container:has(#RV:checked) .img-RV,
+.container:has(#EV:checked) .img-EV,
+.container:has(#E:checked)  .img-E,
+.container:has(#HO:checked) .img-HO,
+.container:has(#CS:checked) .img-CS,
+.container:has(#PA:checked) .img-PA,
+.container:has(#GO:checked) .img-GO {
+    display: block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #181510;
+    color: #E8E4DB;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
